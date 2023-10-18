@@ -1,0 +1,106 @@
+/* Estilo global para o corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Estilo para o contêiner do formulário de cadastro */
+  .submenu {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Estilo para o título "Crie sua conta" */
+  h1 {
+    font-size: 24px;
+    margin: 0;
+    margin-bottom: 20px;
+    color: #007bff;
+  }
+  
+  /* Estilo para os rótulos dos campos de entrada */
+  label {
+    display: block;
+    text-align: left;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  /* Estilo para os campos de entrada de texto */
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  /* Estilo para o botão de cadastro */
+  .Cadastrar {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  /* Estilo para links */
+  a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  /* Estilo para mensagens de erro */
+  input:invalid {
+    border-color: #ff0000;
+  }
+  
+  /* Estilo para mensagens de erro personalizadas */
+  input:invalid + .error-message {
+    color: #ff0000;
+    font-size: 12px;
+    display: block;
+    margin-top: 5px;
+  }
+  
+  /* Estilo para os elementos select */
+  select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  /* Estilo para parágrafos dentro do formulário */
+  p.form {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Estilo para campos de senha */
+  input[type="password"] {
+    width: 48%;
+    margin-right: 2%;
+  }
+  
+  /* Estilo para o botão Cadastrar */
+  .Cadastrar a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
