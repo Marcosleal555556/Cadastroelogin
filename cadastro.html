@@ -3,20 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cadastre-se</title>
 
     <link rel="stylesheet" type="text/css" href="cadastro.css">
 
 </head>
 <body>
 
-      <div class="logo">
-        <img src="image 3.png">
+    <div class="divlogo">
+        <a href="home.html">
+          <img src="logo.png" class="logo">
+        </a>
       </div>
+      
 
       <div id="cadastro" class="submenu">  
         <form id="formCadastro">
-          <h1> Crie sua conta </h1>
+          <h1> CRIE SUA CONTA </h1>
           
           <p class="form">
         </p>
@@ -84,65 +87,22 @@
 
         <p>
             <label for="sexo">Selecione o Sexo Biológico:</label>
-    <select id="sexo" name="sexo" onblur="validarSelecao()">
+    <select id="sexo" name="sexo" onblur="validarSelecao()" required>
         <option value="" disabled selected>Selecione o Sexo Biológico</option>
         <option value="masculino">Masculino</option>
         <option value="feminino">Feminino</option>
     </select>
 
-    <script>
-        function validarSelecao() {
-            const sexo = document.getElementById("sexo").value;
-            if (sexo === "") {
-                alert("Por favor, selecione o sexo biológico.");
-            }
-        }
-    </script>
+   
           </p>
 
           <p>
            
            
             <label for="dataNascimento">Data de Nascimento:</label>
-            <input type="text" id="dataNascimento" name="dataNascimento" placeholder="DD/MM/AAAA" required>
+            <input type="date" id="dataNascimento" name="dataNascimento" placeholder="DD/MM/AAAA" required>
             
-            <script>
-                const dataNascimentoInput = document.getElementById("dataNascimento");
             
-                dataNascimentoInput.addEventListener("input", function () {
-                    let valor = this.value;
-                    valor = valor.replace(/\D/g, ''); // Remover todos os caracteres não numéricos
-            
-                    if (valor.length > 2) {
-                        valor = valor.substring(0, 2) + '/' + valor.substring(2);
-                    }
-                    if (valor.length > 5) {
-                        valor = valor.substring(0, 5) + '/' + valor.substring(5, 9);
-                    }
-            
-                    this.value = valor;
-                });
-            
-                dataNascimentoInput.addEventListener("blur", function () {
-                    const partesData = this.value.split('/');
-                    if (partesData.length !== 3) {
-                        alert("Por favor, insira uma data de nascimento válida.");
-                        this.value = "";
-                        return;
-                    }
-                    const dia = parseInt(partesData[0], 10);
-                    const mes = parseInt(partesData[1], 10);
-                    const ano = parseInt(partesData[2], 10);
-            
-                    const dataAtual = new Date();
-                    const dataNascimento = new Date(ano, mes - 1, dia);
-            
-                    if (isNaN(dataNascimento.getTime()) || dataNascimento >= dataAtual || dia > 31 || dia < 1 || mes > 12 || mes < 1) {
-                        alert("Por favor, insira uma data de nascimento válida.");
-                        this.value = "";
-                    }
-                });
-            </script>
             
             
 </p>
@@ -178,7 +138,8 @@ function validarEmail(input) {
 
           <p>
             <label for="senha">Senha:</label>
-            <input type="password" id="senha" name="senha" oninput="validarSenha(this)" required>
+            <input type="password" id="senha" name="senha" oninput="validarSenha(this)" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$" required title="Mínimo de 8 caracteres, uma letra maiúscula, uma letra minúscula e um número.">
+            
             
             <label for="confirmarSenha">Confirmar Senha:</label>
             <input type="password" id="confirmarSenha" name="confirmarSenha" oninput="validarSenha(this)" required>
@@ -197,11 +158,13 @@ function validarEmail(input) {
                 }
             }
             </script>
+            
+
           </p>
 
          
 
-          <button type="submit" class="Cadastrar"><a href="login.html"></a>Cadastrar</button>
+          <button type="submit" class="Cadastrar"><a href="login.html"></a>Cadastre-se</button>
 
         </form>
       </div>
