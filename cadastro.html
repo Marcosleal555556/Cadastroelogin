@@ -11,7 +11,7 @@
 <body>
 
       <div class="logo">
-        <img src="IMAGENS/logo_maior.png">
+        <img src="image 3.png">
       </div>
 
       <div id="cadastro" class="submenu">  
@@ -24,7 +24,7 @@
         <p>
             
             <label for="cpf">CPF:</label>
-            <input type="text" id="cpf" name="cpf" maxlength="14" oninput="formatarCPF(this)" required>
+            <input type="text" id="cpf" name="cpf" maxlength="14" placeholder="000.000.000-00" oninput="formatarCPF(this)" required>
             
             <script>
                 function formatarCPF(input) {
@@ -62,7 +62,7 @@
 
         <p>
             <label for="nomeCompleto">Nome Completo:</label>
-            <input type="text" id="nomeCompleto" name="nomeCompleto" oninput="validarNomeCompleto(this)" required>
+            <input type="text" id="nomeCompleto" name="nomeCompleto" placeholder="Ex: João da Silva" oninput="validarNomeCompleto(this)" required>
             
             <script>
                 function validarNomeCompleto(input) {
@@ -152,7 +152,7 @@
 
         <p>
             <label for="email">Email:</label>
-<input type="email" id="email" name="email" oninput="validarEmail(this)" required>
+<input type="email" id="email" placeholder="Ex: exemplo@email.com" name="email" oninput="validarEmail(this)" required>
 
 <script>
 function validarEmail(input) {
